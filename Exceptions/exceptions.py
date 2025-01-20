@@ -79,18 +79,48 @@
 
 
 # Handling Exceptions
-def to_uppercase(text):
-    try:
-        result = text.upper()
-    except AttributeError as e:
-        return "Error: Input must be string"
+# def to_uppercase(text):
+#     try:
+#         result = text.upper()
+#     except AttributeError as e:
+#         return "Error: Input must be string"
+#     else:
+#         # If not error raised, return result
+#         return result
+#     finally:
+#         print("Operation complete")
+#
+#
+# print(to_uppercase("hello"))
+# print(to_uppercase(34))
+
+
+# Exercise 2
+# First, run the program and note the exception type. What type is it? TypeError
+# Try to make the program crash-proof using conditionals (if/else statements)
+# Try to make the program crash-proof using try/except/finally (Don't use the generic Exception)
+
+def add_percentage(price, percentage):
+    if isinstance(price, (int, float)):
+        if type(percentage) == int or type(percentage) == float:
+            return price + (percentage * price)
+        else:
+            return "The percentage should be int or float"
     else:
-        # If not error raised, return result
-        return result
+        return "The price should be int or float"
+
+
+def add_percentage(price, percentage):
+    try:
+        return price + (percentage * price)
+    except TypeError:
+        return "Both values must be int or float"
     finally:
-        print("Operation complete")
+        print("Attempted to add percentage to price")
+
+
+print(add_percentage(100, 0.1))
+print(add_percentage(100, "0.05"))
 
 
 
-print(to_uppercase("hello"))
-print(to_uppercase(34))
