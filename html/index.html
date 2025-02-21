@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <h2>Search Form</h2>
+    <form action="https://www.google.com/search" method="get">
+        <label for="search"> Search in Google:</label>
+        <input type="text" id="search" name="q" placeholder="Enter query">
+
+        <button type="submit">Search</button>
+
+    </form>
+
+
+    <h1>HTML Forms</h1>
+    <h2>🔐 Login Form:</h2>
+    <form action="/login" method="post">
+        <label>Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label>Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <h2>Registration Form</h2>
+    <form action="/registration" method="post">
+        <label>Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label>Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- Dropdown option -->
+        <label>Select your country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="es">Spain</option>
+            <option value="uk">UK</option>
+            <option value="de">Germany</option>
+        </select>
+
+        <!-- Radio button -->
+        <label>Gender:</label>
+        <label>Male</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+
+        <label>Female</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+
+        <label>Other</label>
+        <input type="radio" id="other" name="gender" value="other" required>
+
+
+        <label>Reason:</label>
+        <textarea id="message" name="message" rows="3" placeholder="Enter the reason of registration"></textarea>
+
+        <button>Send</button>
+
+    </form>
+</body>
+</html>
