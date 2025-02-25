@@ -1,0 +1,20 @@
+.parent_div {
+    
+    background-color: cadetblue;
+    height: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+  
+}
+
+.child_div {
+    background-color: darkmagenta;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    font-size: xx-large;
+    color: white;
+}
